@@ -1,0 +1,104 @@
+.canvas{
+ position:relative;
+ background-color:black;
+ width:800px;
+ height:600px;
+ margin:auto;
+}
+
+.canvas img{
+  display:block;
+  margin:0;
+  padding:0;
+  position:absolute;
+}
+
+::selection{
+	background-color: transparent;
+	color: transparent;
+}
+
+#forground{
+  left:0px;
+  top:336px;
+}
+
+#bullet{
+  left:80px;
+  top:526px;
+}
+
+#hit01{
+  left:280px;
+  top:523px;
+}
+
+#hit02{
+  left:310px;
+  top:523px;
+}
+
+#hit03{
+  left:340px;
+  top:523px;
+}
+
+#hit04{
+  left:370px;
+  top:523px;
+}
+
+#hit05{
+  left:400px;
+  top:523px;
+}
+
+#hit06{
+  left:430px;
+  top:523px;
+}
+
+#hit07{
+  left:460px;
+  top:523px;
+}
+
+#hit08{
+  left:490px;
+  top:523px;
+}
+
+#hit09{
+  left:520px;
+  top:523px;
+}
+
+#score1{
+  left:600px;
+  top:526px;
+}
+
+#score2{
+  left:625px;
+  top:526px;
+}
+
+#score3{
+  left:650px;
+  top:526px;
+}
+
+#score4{
+  left:675px;
+  top:526px;
+}
+
+#score5{
+  left:700px;
+  top:526px;
+}
+
+#score6{
+  left:725px;
+  top:526px;
+}
