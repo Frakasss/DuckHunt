@@ -13,9 +13,22 @@
   position:absolute;
 }
 
+.preload{
+  position:absolute;
+  left:0px;
+  top:0px;	
+  width:1px;
+  height:1px;
+}
+
 ::selection{
 	background-color: transparent;
 	color: transparent;
+}
+
+#mask{
+  left:0px;
+  top:-72px;
 }
 
 #forground{
@@ -101,4 +114,19 @@
 #score6{
   left:725px;
   top:526px;
+}
+
+#pannel{
+  left:349px;
+  top:150px;
+}
+
+#lvlnb01{
+  left:377px;
+  top:190px;
+}
+
+#lvlnb02{
+  left:405px;
+  top:190px;
 }

@@ -2,40 +2,197 @@
 <html>
 	<head>
 		<meta charset="UTF-8">
-		<title>Page web</title>
+		<title>DUCK HUNT</title>
 		<link rel="stylesheet" type="text/css" href="feuille-de-styles.css" />   
-	</head>
+  	</head>
 
 	<body>
 		<br><br>
-
 		<div class="canvas" ondragstart="return false;">
 			<img id="background" src="images/Background.png" ondragstart="return false;">
-			<img id="canard01" src="images/Empty.png" ondragstart="return false;">
-			<img id="canard02" src="images/Empty.png" ondragstart="return false;">
-			<img id="canard03" src="images/Empty.png" ondragstart="return false;">
+			<img id="canard" src="images/Empty.png" ondragstart="return false;">
 			<img id="dog02" src="images/Empty.png" ondragstart="return false;">
 			<img id="forground" src="images/Forground.png" ondragstart="return false;">
+			<img id="mask" src="images/Blanc.png" ondragstart="return false;">
 			<img id="dog01" src="images/Empty.png" ondragstart="return false;">
 			<img id="bullet" src="images/Bullet_3.png" ondragstart="return false;">
-			<img id="hit01" src="images/Hit_Ok.png" ondragstart="return false;">
-			<img id="hit02" src="images/Hit_Ok.png" ondragstart="return false;">
-			<img id="hit03" src="images/Hit_Ok.png" ondragstart="return false;">
-			<img id="hit04" src="images/Hit_Ok.png" ondragstart="return false;">
-			<img id="hit05" src="images/Hit_Ok.png" ondragstart="return false;">
-			<img id="hit06" src="images/Hit_Ok.png" ondragstart="return false;">
-			<img id="hit07" src="images/Hit_Ok.png" ondragstart="return false;">
-			<img id="hit08" src="images/Hit_Ok.png" ondragstart="return false;">
-			<img id="hit09" src="images/Hit_Ok.png" ondragstart="return false;">
+			<img id="hit01" src="images/Hit_ok.png" ondragstart="return false;">
+			<img id="hit02" src="images/Hit_ok.png" ondragstart="return false;">
+			<img id="hit03" src="images/Hit_ok.png" ondragstart="return false;">
+			<img id="hit04" src="images/Hit_ok.png" ondragstart="return false;">
+			<img id="hit05" src="images/Hit_ok.png" ondragstart="return false;">
+			<img id="hit06" src="images/Hit_ok.png" ondragstart="return false;">
+			<img id="hit07" src="images/Hit_ok.png" ondragstart="return false;">
+			<img id="hit08" src="images/Hit_ok.png" ondragstart="return false;">
+			<img id="hit09" src="images/Hit_ok.png" ondragstart="return false;">
 			<img id="score1" src="images/Score_0.png" ondragstart="return false;">
 			<img id="score2" src="images/Score_0.png" ondragstart="return false;">
 			<img id="score3" src="images/Score_0.png" ondragstart="return false;">
 			<img id="score4" src="images/Score_0.png" ondragstart="return false;">
 			<img id="score5" src="images/Score_0.png" ondragstart="return false;">
 			<img id="score6" src="images/Score_0.png" ondragstart="return false;">
+			<img id="pannel" src="images/Panel_Round.png" ondragstart="return false;">
+			<img id="lvlnb01" src="images/Empty.png" ondragstart="return false;">
+			<img id="lvlnb02" src="images/Empty.png" ondragstart="return false;">
+			<img id="intro" src="images/Start.jpg" ondragstart="return false;">
 		</div>
-		<!--<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>-->
-		<script src="jquery.js"></script>
+		
+		<audio preload="auto" id="01-title-screen">
+			<source src="sound/01-title-screen.mp3" type="audio/mp3">
+			<source src="sound/01-title-screen.ogg" type="audio/ogg">
+		</audio>		
+		
+		<audio preload="auto" id="02-duck-hunt-intro">
+			<source src="sound/02-duck-hunt-intro.mp3" type="audio/mp3">
+			<source src="sound/02-duck-hunt-intro.ogg" type="audio/ogg">
+		</audio>
+		
+		<audio preload="auto" id="04-got-duck-s-">
+			<source src="sound/04-got-duck-s-.mp3" type="audio/mp3">
+			<source src="sound/04-got-duck-s-.ogg" type="audio/ogg">
+		</audio>
+		
+		<audio preload="auto" id="05-round-clear">
+			<source src="sound/05-round-clear.mp3" type="audio/mp3">
+			<source src="sound/05-round-clear.ogg" type="audio/ogg">
+		</audio>
+		
+		<audio preload="auto" id="08-game-over">
+			<source src="sound/08-game-over.mp3" type="audio/mp3">
+			<source src="sound/08-game-over.ogg" type="audio/ogg">
+		</audio>
+		
+		<audio preload="auto" id="09-bark-sfx-">
+			<source src="sound/09-bark-sfx-.mp3" type="audio/mp3">
+			<source src="sound/09-bark-sfx-.ogg" type="audio/ogg">
+		</audio>
+		
+		<audio preload="auto" id="10-dead-duck-falls-sfx-">
+			<source src="sound/10-dead-duck-falls-sfx-.mp3" type="audio/mp3">
+			<source src="sound/10-dead-duck-falls-sfx-.ogg" type="audio/ogg">
+		</audio>
+		
+		<audio preload="auto" id="11-dead-duck-lands-sfx-">
+			<source src="sound/11-dead-duck-lands-sfx-.mp3" type="audio/mp3">
+			<source src="sound/11-dead-duck-lands-sfx-.ogg" type="audio/ogg">
+		</audio>
+		
+		<audio preload="auto" id="12-duck-flapping-sfx-">
+			<source src="sound/12-duck-flapping-sfx-.mp3" type="audio/mp3">
+			<source src="sound/12-duck-flapping-sfx-.ogg" type="audio/ogg">
+		</audio>
+		
+		<audio preload="auto" id="13-gunshot-sfx-">
+			<source src="sound/13-gunshot-sfx-.mp3" type="audio/mp3">
+			<source src="sound/13-gunshot-sfx-.ogg" type="audio/ogg">
+		</audio>
+		
+		<audio preload="auto" id="14-laugh-sfx-">
+			<source src="sound/14-laugh-sfx-.mp3" type="audio/mp3">
+			<source src="sound/14-laugh-sfx-.ogg" type="audio/ogg">
+		</audio>
+		
+		<audio preload="auto" id="15-quack-sfx-">
+			<source src="sound/15-quack-sfx-.mp3" type="audio/mp3">
+			<source src="sound/15-quack-sfx-.ogg" type="audio/ogg">
+		</audio>
+
+		<img class="preload" src="images/Background.png">
+  		<img class="preload" src="images/Blanc.png">
+  		<img class="preload" src="images/Bullet_0.png">
+  		<img class="preload" src="images/Bullet_1.png">
+  		<img class="preload" src="images/Bullet_2.png">
+  		<img class="preload" src="images/Bullet_3.png">
+  		<img class="preload" src="images/Dog001.png">
+  		<img class="preload" src="images/Dog002.png">
+  		<img class="preload" src="images/Dog003.png">
+  		<img class="preload" src="images/Dog004.png">
+  		<img class="preload" src="images/Dog005.png">
+  		<img class="preload" src="images/Dog006.png">
+  		<img class="preload" src="images/Dog007.png">
+  		<img class="preload" src="images/Dog008.png">
+  		<img class="preload" src="images/Dog009.png">
+  		<img class="preload" src="images/Dog011.png">
+  		<img class="preload" src="images/Dog012.png">
+  		<img class="preload" src="images/Dog0100.png">
+  		<img class="preload" src="images/Dog0101.png">
+  		<img class="preload" src="images/Dog0102.png">
+  		<img class="preload" src="images/Duck_Dead001.png">
+  		<img class="preload" src="images/Duck_Dead002.png">
+  		<img class="preload" src="images/Duck_Dead101.png">
+  		<img class="preload" src="images/Duck_Dead102.png">
+		<img class="preload" src="images/Duck_Dead201.png">
+  		<img class="preload" src="images/Duck_Dead202.png">
+  		<img class="preload" src="images/Duck_FlyAway001.png">
+  		<img class="preload" src="images/Duck_FlyAway002.png">
+  		<img class="preload" src="images/Duck_FlyAway003.png">
+  		<img class="preload" src="images/Duck_FlyAway101.png">
+  		<img class="preload" src="images/Duck_FlyAway102.png">
+  		<img class="preload" src="images/Duck_FlyAway103.png">
+  		<img class="preload" src="images/Duck_FlyAway201.png">
+  		<img class="preload" src="images/Duck_FlyAway202.png">
+  		<img class="preload" src="images/Duck_FlyAway203.png">
+  		<img class="preload" src="images/Duck_Shot.png">
+  		<img class="preload" src="images/Duck_Shot1.png">
+  		<img class="preload" src="images/Duck_Shot2.png">
+  		<img class="preload" src="images/Duck_ToLeft001.png">
+  		<img class="preload" src="images/Duck_ToLeft002.png">
+  		<img class="preload" src="images/Duck_ToLeft003.png">
+  		<img class="preload" src="images/Duck_ToLeft101.png">
+  		<img class="preload" src="images/Duck_ToLeft102.png">
+  		<img class="preload" src="images/Duck_ToLeft103.png">
+  		<img class="preload" src="images/Duck_ToLeft201.png">
+  		<img class="preload" src="images/Duck_ToLeft202.png">
+  		<img class="preload" src="images/Duck_ToLeft203.png">
+  		<img class="preload" src="images/Duck_ToLeftTop001.png">
+  		<img class="preload" src="images/Duck_ToLeftTop002.png">
+  		<img class="preload" src="images/Duck_ToLeftTop003.png">
+  		<img class="preload" src="images/Duck_ToLeftTop101.png">
+  		<img class="preload" src="images/Duck_ToLeftTop102.png">
+  		<img class="preload" src="images/Duck_ToLeftTop103.png">
+  		<img class="preload" src="images/Duck_ToLeftTop201.png">
+  		<img class="preload" src="images/Duck_ToLeftTop202.png">
+  		<img class="preload" src="images/Duck_ToLeftTop203.png">
+  		<img class="preload" src="images/Duck_ToRight001.png">
+  		<img class="preload" src="images/Duck_ToRight002.png">
+  		<img class="preload" src="images/Duck_ToRight003.png">
+  		<img class="preload" src="images/Duck_ToRight101.png">
+  		<img class="preload" src="images/Duck_ToRight102.png">
+  		<img class="preload" src="images/Duck_ToRight103.png">
+  		<img class="preload" src="images/Duck_ToRight201.png">
+  		<img class="preload" src="images/Duck_ToRight202.png">
+  		<img class="preload" src="images/Duck_ToRight203.png">
+  		<img class="preload" src="images/Duck_ToRightTop001.png">
+  		<img class="preload" src="images/Duck_ToRightTop002.png">
+  		<img class="preload" src="images/Duck_ToRightTop003.png">
+  		<img class="preload" src="images/Duck_ToRightTop101.png">
+  		<img class="preload" src="images/Duck_ToRightTop102.png">
+  		<img class="preload" src="images/Duck_ToRightTop103.png">
+  		<img class="preload" src="images/Duck_ToRightTop201.png">
+  		<img class="preload" src="images/Duck_ToRightTop202.png">
+  		<img class="preload" src="images/Duck_ToRightTop203.png">
+  		<img class="preload" src="images/Empty.png">
+  		<img class="preload" src="images/Forground.png">
+  		<img class="preload" src="images/Hit_Empty.png">
+  		<img class="preload" src="images/Hit_ko.png">
+  		<img class="preload" src="images/Hit_ok.png">
+  		<img class="preload" src="images/Panel_FlyAway.png">
+  		<img class="preload" src="images/Panel_GameOver.png">
+  		<img class="preload" src="images/Panel_Round.png">
+  		<img class="preload" src="images/Score_0.png">
+  		<img class="preload" src="images/Score_1.png">
+  		<img class="preload" src="images/Score_2.png">
+  		<img class="preload" src="images/Score_3.png">
+  		<img class="preload" src="images/Score_4.png">
+  		<img class="preload" src="images/Score_5.png">
+  		<img class="preload" src="images/Score_6.png">
+  		<img class="preload" src="images/Score_7.png">
+  		<img class="preload" src="images/Score_8.png">
+  		<img class="preload" src="images/Score_9.png">
+  		<img class="preload" src="images/Start.jpg">		
+		
+		
+		<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
 		<script src="my-script-jQuery.js"></script>
 	</body>
 
